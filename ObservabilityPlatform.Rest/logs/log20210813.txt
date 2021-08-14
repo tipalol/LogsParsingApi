@@ -1,0 +1,563 @@
+2021-08-13 13:43:51.479 +05:00 [INF] Starting web host
+2021-08-13 13:43:52.441 +05:00 [DBG] Hosting starting
+2021-08-13 13:43:52.872 +05:00 [FTL] Application startup exception
+System.InvalidOperationException: Action 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+IEnumerable<string> keyWords
+string log
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.InferParameterBindingSources(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.Apply(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.GetChangeToken()
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointDataSourceBase.<>c__DisplayClass11_0.<Subscribe>b__0()
+   at Microsoft.Extensions.Primitives.ChangeToken.OnChange(Func`1 changeTokenProducer, Action changeTokenConsumer)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointDataSourceBase.Subscribe()
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerActionEndpointDataSource..ctor(ControllerActionEndpointDataSourceIdProvider dataSourceIdProvider, IActionDescriptorCollectionProvider actions, ActionEndpointFactory endpointFactory, OrderedEndpointsSequenceProvider orderSequence)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.GetOrCreateDataSource(IEndpointRouteBuilder endpoints)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.MapControllers(IEndpointRouteBuilder endpoints)
+   at ObservabilityPlatform.Rest.Startup.<>c.<Configure>b__5_1(IEndpointRouteBuilder endpoints) in /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest/Startup.cs:line 63
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
+   at ObservabilityPlatform.Rest.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest/Startup.cs:line 63
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-08-13 13:43:53.379 +05:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Action 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+IEnumerable<string> keyWords
+string log
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.InferParameterBindingSources(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.Apply(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.GetChangeToken()
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointDataSourceBase.<>c__DisplayClass11_0.<Subscribe>b__0()
+   at Microsoft.Extensions.Primitives.ChangeToken.OnChange(Func`1 changeTokenProducer, Action changeTokenConsumer)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointDataSourceBase.Subscribe()
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerActionEndpointDataSource..ctor(ControllerActionEndpointDataSourceIdProvider dataSourceIdProvider, IActionDescriptorCollectionProvider actions, ActionEndpointFactory endpointFactory, OrderedEndpointsSequenceProvider orderSequence)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.GetOrCreateDataSource(IEndpointRouteBuilder endpoints)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.MapControllers(IEndpointRouteBuilder endpoints)
+   at ObservabilityPlatform.Rest.Startup.<>c.<Configure>b__5_1(IEndpointRouteBuilder endpoints) in /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest/Startup.cs:line 63
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
+   at ObservabilityPlatform.Rest.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest/Startup.cs:line 63
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at ObservabilityPlatform.Rest.Program.Main(String[] args) in /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest/Program.cs:line 26
+2021-08-13 13:44:43.018 +05:00 [INF] Starting web host
+2021-08-13 13:44:44.141 +05:00 [DBG] Hosting starting
+2021-08-13 13:44:44.858 +05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 34297F096C16E1CA2FE9B9B16742841A92D5E9A4)
+2021-08-13 13:44:44.910 +05:00 [INF] Now listening on: https://localhost:5001
+2021-08-13 13:44:44.910 +05:00 [INF] Now listening on: http://localhost:5000
+2021-08-13 13:44:44.910 +05:00 [DBG] Loaded hosting startup assembly ObservabilityPlatform.Rest
+2021-08-13 13:44:44.910 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-13 13:44:44.911 +05:00 [INF] Hosting environment: Development
+2021-08-13 13:44:44.911 +05:00 [INF] Content root path: /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest
+2021-08-13 13:44:44.911 +05:00 [DBG] Hosting started
+2021-08-13 13:44:45.338 +05:00 [DBG] Connection id "0HMAU6QCUQDD5" received FIN.
+2021-08-13 13:44:45.377 +05:00 [DBG] Connection id "0HMAU6QCUQDD5" accepted.
+2021-08-13 13:44:45.379 +05:00 [DBG] Connection id "0HMAU6QCUQDD5" started.
+2021-08-13 13:44:45.432 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2021-08-13 13:44:45.955 +05:00 [DBG] Connection id "0HMAU6QCUQDD5" stopped.
+2021-08-13 13:44:46.074 +05:00 [DBG] Connection id "0HMAU6QCUQDD5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-08-13 13:44:47.180 +05:00 [DBG] Connection id "0HMAU6QCUQDD6" accepted.
+2021-08-13 13:44:47.181 +05:00 [DBG] Connection id "0HMAU6QCUQDD6" started.
+2021-08-13 13:44:47.373 +05:00 [DBG] Connection "0HMAU6QCUQDD6" established using the following protocol: "Tls12"
+2021-08-13 13:44:48.577 +05:00 [DBG] Connection id "0HMAU6QCUQDD7" accepted.
+2021-08-13 13:44:48.578 +05:00 [DBG] Connection id "0HMAU6QCUQDD7" started.
+2021-08-13 13:44:48.629 +05:00 [DBG] Connection "0HMAU6QCUQDD7" established using the following protocol: "Tls12"
+2021-08-13 13:44:48.780 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+2021-08-13 13:44:48.790 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-08-13 13:44:49.115 +05:00 [DBG] Connection id "0HMAU6QCUQDD6" completed keep alive response.
+2021-08-13 13:44:49.120 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 359.8636ms
+2021-08-13 13:44:49.406 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-08-13 13:44:49.456 +05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2021-08-13 13:44:49.473 +05:00 [DBG] Handled. Status code: 304 File: /swagger-ui-standalone-preset.js
+2021-08-13 13:44:49.479 +05:00 [DBG] Connection id "0HMAU6QCUQDD6" completed keep alive response.
+2021-08-13 13:44:49.479 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 72.8837ms
+2021-08-13 13:44:49.556 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-13 13:44:49.602 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-13 13:44:49.603 +05:00 [DBG] Connection id "0HMAU6QCUQDD6" completed keep alive response.
+2021-08-13 13:44:49.603 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 142933 text/css 47.0844ms
+2021-08-13 13:44:50.435 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-13 13:44:50.809 +05:00 [DBG] Connection id "0HMAU6QCUQDD8" accepted.
+2021-08-13 13:44:50.810 +05:00 [DBG] Connection id "0HMAU6QCUQDD8" started.
+2021-08-13 13:44:50.857 +05:00 [DBG] Connection "0HMAU6QCUQDD8" established using the following protocol: "Tls12"
+2021-08-13 13:44:50.869 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/apple-touch-icon-precomposed.png - -
+2021-08-13 13:44:50.869 +05:00 [DBG] The request path  does not match the path filter
+2021-08-13 13:44:51.046 +05:00 [DBG] Connection id "0HMAU6QCUQDD6" completed keep alive response.
+2021-08-13 13:44:51.046 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 611.6579ms
+2021-08-13 13:44:51.451 +05:00 [DBG] No candidates found for the request path '/apple-touch-icon-precomposed.png'
+2021-08-13 13:44:51.454 +05:00 [DBG] Request did not match any endpoints
+2021-08-13 13:44:51.494 +05:00 [INF] HTTP GET /apple-touch-icon-precomposed.png responded 404 in 605.6273 ms
+2021-08-13 13:44:51.520 +05:00 [DBG] Connection id "0HMAU6QCUQDD8" completed keep alive response.
+2021-08-13 13:44:51.523 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/apple-touch-icon-precomposed.png - - - 404 0 - 653.9954ms
+2021-08-13 13:44:51.540 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/apple-touch-icon.png - -
+2021-08-13 13:44:51.559 +05:00 [DBG] The request path  does not match the path filter
+2021-08-13 13:44:51.561 +05:00 [DBG] No candidates found for the request path '/apple-touch-icon.png'
+2021-08-13 13:44:51.562 +05:00 [DBG] Request did not match any endpoints
+2021-08-13 13:44:51.562 +05:00 [INF] HTTP GET /apple-touch-icon.png responded 404 in 2.5977 ms
+2021-08-13 13:44:51.566 +05:00 [DBG] Connection id "0HMAU6QCUQDD8" completed keep alive response.
+2021-08-13 13:44:51.567 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/apple-touch-icon.png - - - 404 0 - 26.8183ms
+2021-08-13 13:45:20.028 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse apllication/text 25
+2021-08-13 13:45:20.034 +05:00 [DBG] POST requests are not supported
+2021-08-13 13:45:20.044 +05:00 [DBG] 1 candidate(s) found for the request path '/ParsingLogs/parse'
+2021-08-13 13:45:20.057 +05:00 [DBG] Endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)' with route pattern 'ParsingLogs/parse' is valid for the request path '/ParsingLogs/parse'
+2021-08-13 13:45:20.065 +05:00 [DBG] Request matched endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:45:20.071 +05:00 [INF] Executing endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:45:20.248 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2021-08-13 13:45:20.531 +05:00 [INF] Route matched with {action = "Parse", controller = "ParsingLogs"}. Executing controller action with signature Void Parse(System.Collections.Generic.IEnumerable`1[System.String], System.String) on controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest).
+2021-08-13 13:45:20.536 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-08-13 13:45:20.537 +05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+2021-08-13 13:45:20.537 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-08-13 13:45:20.538 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-08-13 13:45:20.538 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-08-13 13:45:20.541 +05:00 [DBG] Executing controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:45:20.542 +05:00 [DBG] Executed controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:45:20.634 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:45:20.646 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:45:20.663 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:45:20.670 +05:00 [DBG] Attempting to bind model of type 'System.String' using the name '' in request data ...
+2021-08-13 13:45:20.671 +05:00 [DBG] Done attempting to bind model of type 'System.String' using the name ''.
+2021-08-13 13:45:20.675 +05:00 [DBG] Attempting to bind model of type 'System.String' using the name '' in request data ...
+2021-08-13 13:45:20.675 +05:00 [DBG] Done attempting to bind model of type 'System.String' using the name ''.
+2021-08-13 13:45:20.676 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:45:20.688 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:45:20.692 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:45:20.722 +05:00 [DBG] Attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:45:20.800 +05:00 [DBG] Done attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:45:20.816 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' ...
+2021-08-13 13:45:20.821 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' using the name '' in request data ...
+2021-08-13 13:45:20.827 +05:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'apllication/text'.
+2021-08-13 13:45:20.829 +05:00 [DBG] No input formatter was found to support the content type 'apllication/text' for use with the [FromBody] attribute.
+2021-08-13 13:45:20.849 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:45:20.849 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:45:20.849 +05:00 [DBG] Attempting to validate the bound parameter 'log' of type 'System.String' ...
+2021-08-13 13:45:20.852 +05:00 [DBG] Done attempting to validate the bound parameter 'log' of type 'System.String'.
+2021-08-13 13:45:20.865 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter'.
+2021-08-13 13:45:20.889 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-08-13 13:45:20.917 +05:00 [DBG] No information found on request to perform content negotiation.
+2021-08-13 13:45:20.925 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml"]'.
+2021-08-13 13:45:20.948 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2021-08-13 13:45:20.998 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-13 13:45:21.257 +05:00 [INF] Executed action ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest) in 665.0329ms
+2021-08-13 13:45:21.260 +05:00 [INF] Executed endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:45:21.261 +05:00 [INF] HTTP POST /ParsingLogs/parse responded 415 in 1226.8352 ms
+2021-08-13 13:45:21.261 +05:00 [DBG] Connection id "0HMAU6QCUQDD6" completed keep alive response.
+2021-08-13 13:45:21.261 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse apllication/text 25 - 415 - application/problem+json;+charset=utf-8 1235.9505ms
+2021-08-13 13:45:21.297 +05:00 [DBG] Connection id "0HMAU6QCUQDD6", Request id "0HMAU6QCUQDD6:00000006": started reading request body.
+2021-08-13 13:45:21.593 +05:00 [INF] Connection id "0HMAU6QCUQDD6", Request id "0HMAU6QCUQDD6:00000006": the application completed without reading the entire request body.
+2021-08-13 13:45:21.718 +05:00 [DBG] Connection id "0HMAU6QCUQDD6", Request id "0HMAU6QCUQDD6:00000006": done reading request body.
+2021-08-13 13:45:47.353 +05:00 [DBG] Connection id "0HMAU6QCUQDD7" received FIN.
+2021-08-13 13:45:47.363 +05:00 [DBG] Connection id "0HMAU6QCUQDD7" disconnecting.
+2021-08-13 13:45:47.365 +05:00 [DBG] Connection id "0HMAU6QCUQDD7" sending FIN because: "The client closed the connection."
+2021-08-13 13:45:47.385 +05:00 [DBG] Connection id "0HMAU6QCUQDD7" stopped.
+2021-08-13 13:45:51.453 +05:00 [DBG] Connection id "0HMAU6QCUQDD8" disconnecting.
+2021-08-13 13:45:51.454 +05:00 [DBG] Connection id "0HMAU6QCUQDD8" stopped.
+2021-08-13 13:45:51.455 +05:00 [DBG] Connection id "0HMAU6QCUQDD8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-08-13 13:46:15.565 +05:00 [INF] Starting web host
+2021-08-13 13:46:16.467 +05:00 [DBG] Hosting starting
+2021-08-13 13:46:17.122 +05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 34297F096C16E1CA2FE9B9B16742841A92D5E9A4)
+2021-08-13 13:46:17.173 +05:00 [INF] Now listening on: https://localhost:5001
+2021-08-13 13:46:17.175 +05:00 [INF] Now listening on: http://localhost:5000
+2021-08-13 13:46:17.175 +05:00 [DBG] Loaded hosting startup assembly ObservabilityPlatform.Rest
+2021-08-13 13:46:17.177 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-13 13:46:17.177 +05:00 [INF] Hosting environment: Development
+2021-08-13 13:46:17.177 +05:00 [INF] Content root path: /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest
+2021-08-13 13:46:17.177 +05:00 [DBG] Hosting started
+2021-08-13 13:46:17.678 +05:00 [DBG] Connection id "0HMAU6R8FDI17" received FIN.
+2021-08-13 13:46:17.793 +05:00 [DBG] Connection id "0HMAU6R8FDI17" accepted.
+2021-08-13 13:46:17.803 +05:00 [DBG] Connection id "0HMAU6R8FDI17" started.
+2021-08-13 13:46:18.025 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2021-08-13 13:46:18.248 +05:00 [DBG] Connection id "0HMAU6R8FDI18" accepted.
+2021-08-13 13:46:18.360 +05:00 [DBG] Connection id "0HMAU6R8FDI18" started.
+2021-08-13 13:46:18.552 +05:00 [DBG] Connection id "0HMAU6R8FDI17" stopped.
+2021-08-13 13:46:18.561 +05:00 [DBG] Connection id "0HMAU6R8FDI17" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-08-13 13:46:18.614 +05:00 [DBG] Connection "0HMAU6R8FDI18" established using the following protocol: "Tls12"
+2021-08-13 13:46:19.987 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+2021-08-13 13:46:19.992 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-08-13 13:46:20.675 +05:00 [DBG] Connection id "0HMAU6R8FDI18" completed keep alive response.
+2021-08-13 13:46:20.681 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 704.7415ms
+2021-08-13 13:46:21.776 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-13 13:46:23.015 +05:00 [DBG] Connection id "0HMAU6R8FDI18" completed keep alive response.
+2021-08-13 13:46:23.157 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1368.5599ms
+2021-08-13 13:46:39.307 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/text 18
+2021-08-13 13:46:39.363 +05:00 [DBG] POST requests are not supported
+2021-08-13 13:46:39.640 +05:00 [DBG] 1 candidate(s) found for the request path '/ParsingLogs/parse'
+2021-08-13 13:46:39.658 +05:00 [DBG] Endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)' with route pattern 'ParsingLogs/parse' is valid for the request path '/ParsingLogs/parse'
+2021-08-13 13:46:39.664 +05:00 [DBG] Request matched endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:46:39.708 +05:00 [INF] Executing endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:46:39.750 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2021-08-13 13:46:39.889 +05:00 [INF] Route matched with {action = "Parse", controller = "ParsingLogs"}. Executing controller action with signature Void Parse(System.Collections.Generic.IEnumerable`1[System.String], System.String) on controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest).
+2021-08-13 13:46:39.892 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-08-13 13:46:39.892 +05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+2021-08-13 13:46:39.893 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-08-13 13:46:39.893 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-08-13 13:46:39.893 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-08-13 13:46:39.896 +05:00 [DBG] Executing controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:46:39.901 +05:00 [DBG] Executed controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:46:39.981 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:46:39.992 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:46:40.018 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:46:40.027 +05:00 [DBG] Attempting to bind model of type 'System.String' using the name '' in request data ...
+2021-08-13 13:46:40.028 +05:00 [DBG] Done attempting to bind model of type 'System.String' using the name ''.
+2021-08-13 13:46:40.030 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:46:40.032 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:46:40.032 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:46:40.035 +05:00 [DBG] Attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:46:40.087 +05:00 [DBG] Done attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:46:40.180 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' ...
+2021-08-13 13:46:40.186 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' using the name '' in request data ...
+2021-08-13 13:46:40.188 +05:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/text'.
+2021-08-13 13:46:40.190 +05:00 [DBG] No input formatter was found to support the content type 'application/text' for use with the [FromBody] attribute.
+2021-08-13 13:46:40.197 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:46:40.199 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:46:40.206 +05:00 [DBG] Attempting to validate the bound parameter 'log' of type 'System.String' ...
+2021-08-13 13:46:40.209 +05:00 [DBG] Done attempting to validate the bound parameter 'log' of type 'System.String'.
+2021-08-13 13:46:40.213 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter'.
+2021-08-13 13:46:40.236 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-08-13 13:46:40.265 +05:00 [DBG] No information found on request to perform content negotiation.
+2021-08-13 13:46:40.270 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml"]'.
+2021-08-13 13:46:40.286 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2021-08-13 13:46:40.328 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-13 13:46:40.449 +05:00 [INF] Executed action ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest) in 538.4711ms
+2021-08-13 13:46:40.454 +05:00 [INF] Executed endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:46:40.463 +05:00 [INF] HTTP POST /ParsingLogs/parse responded 415 in 1082.9174 ms
+2021-08-13 13:46:40.464 +05:00 [DBG] Connection id "0HMAU6R8FDI18" completed keep alive response.
+2021-08-13 13:46:40.465 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/text 18 - 415 - application/problem+json;+charset=utf-8 1170.8410ms
+2021-08-13 13:46:40.473 +05:00 [DBG] Connection id "0HMAU6R8FDI18", Request id "0HMAU6R8FDI18:00000004": started reading request body.
+2021-08-13 13:46:40.518 +05:00 [INF] Connection id "0HMAU6R8FDI18", Request id "0HMAU6R8FDI18:00000004": the application completed without reading the entire request body.
+2021-08-13 13:46:40.548 +05:00 [DBG] Connection id "0HMAU6R8FDI18", Request id "0HMAU6R8FDI18:00000004": done reading request body.
+2021-08-13 13:47:18.244 +05:00 [DBG] Connection id "0HMAU6R8FDI18" received FIN.
+2021-08-13 13:47:18.254 +05:00 [DBG] Connection id "0HMAU6R8FDI18" disconnecting.
+2021-08-13 13:47:18.259 +05:00 [DBG] Connection id "0HMAU6R8FDI18" sending FIN because: "The client closed the connection."
+2021-08-13 13:47:18.293 +05:00 [DBG] Connection id "0HMAU6R8FDI18" stopped.
+2021-08-13 13:47:29.338 +05:00 [INF] Starting web host
+2021-08-13 13:47:30.307 +05:00 [DBG] Hosting starting
+2021-08-13 13:47:30.864 +05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 34297F096C16E1CA2FE9B9B16742841A92D5E9A4)
+2021-08-13 13:47:30.917 +05:00 [INF] Now listening on: https://localhost:5001
+2021-08-13 13:47:30.918 +05:00 [INF] Now listening on: http://localhost:5000
+2021-08-13 13:47:30.918 +05:00 [DBG] Loaded hosting startup assembly ObservabilityPlatform.Rest
+2021-08-13 13:47:30.919 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-13 13:47:30.920 +05:00 [INF] Hosting environment: Development
+2021-08-13 13:47:30.920 +05:00 [INF] Content root path: /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest
+2021-08-13 13:47:30.929 +05:00 [DBG] Hosting started
+2021-08-13 13:47:31.141 +05:00 [DBG] Connection id "0HMAU6RUC0FVR" received FIN.
+2021-08-13 13:47:31.230 +05:00 [DBG] Connection id "0HMAU6RUC0FVR" accepted.
+2021-08-13 13:47:31.245 +05:00 [DBG] Connection id "0HMAU6RUC0FVR" started.
+2021-08-13 13:47:31.378 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2021-08-13 13:47:31.495 +05:00 [DBG] Connection id "0HMAU6RUC0FVR" stopped.
+2021-08-13 13:47:31.517 +05:00 [DBG] Connection id "0HMAU6RUC0FVR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-08-13 13:47:31.765 +05:00 [DBG] Connection id "0HMAU6RUC0FVS" accepted.
+2021-08-13 13:47:31.766 +05:00 [DBG] Connection id "0HMAU6RUC0FVS" started.
+2021-08-13 13:47:31.985 +05:00 [DBG] Connection "0HMAU6RUC0FVS" established using the following protocol: "Tls12"
+2021-08-13 13:47:32.680 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+2021-08-13 13:47:32.699 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-08-13 13:47:33.022 +05:00 [DBG] Connection id "0HMAU6RUC0FVS" completed keep alive response.
+2021-08-13 13:47:33.028 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 362.4662ms
+2021-08-13 13:47:33.839 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-13 13:47:34.293 +05:00 [DBG] Connection id "0HMAU6RUC0FVS" completed keep alive response.
+2021-08-13 13:47:34.299 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 459.7447ms
+2021-08-13 13:47:58.109 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/json 5
+2021-08-13 13:47:58.116 +05:00 [DBG] POST requests are not supported
+2021-08-13 13:47:58.216 +05:00 [DBG] 1 candidate(s) found for the request path '/ParsingLogs/parse'
+2021-08-13 13:47:58.234 +05:00 [DBG] Endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)' with route pattern 'ParsingLogs/parse' is valid for the request path '/ParsingLogs/parse'
+2021-08-13 13:47:58.237 +05:00 [DBG] Request matched endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:47:58.255 +05:00 [INF] Executing endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:47:58.309 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2021-08-13 13:47:58.420 +05:00 [INF] Route matched with {action = "Parse", controller = "ParsingLogs"}. Executing controller action with signature Void Parse(System.Collections.Generic.IEnumerable`1[System.String], System.String) on controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest).
+2021-08-13 13:47:58.423 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-08-13 13:47:58.424 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2021-08-13 13:47:58.424 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-08-13 13:47:58.425 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-08-13 13:47:58.425 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-08-13 13:47:58.428 +05:00 [DBG] Executing controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:47:58.433 +05:00 [DBG] Executed controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:47:58.473 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:47:58.484 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:47:58.491 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:47:58.500 +05:00 [DBG] Attempting to bind model of type 'System.String' using the name '' in request data ...
+2021-08-13 13:47:58.502 +05:00 [DBG] Done attempting to bind model of type 'System.String' using the name ''.
+2021-08-13 13:47:58.510 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:47:58.511 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:47:58.511 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:47:58.512 +05:00 [DBG] Attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:47:58.524 +05:00 [DBG] Done attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:47:58.551 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' ...
+2021-08-13 13:47:58.555 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' using the name '' in request data ...
+2021-08-13 13:47:58.559 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2021-08-13 13:47:58.584 +05:00 [DBG] Connection id "0HMAU6RUC0FVS", Request id "0HMAU6RUC0FVS:00000004": started reading request body.
+2021-08-13 13:47:58.584 +05:00 [DBG] Connection id "0HMAU6RUC0FVS", Request id "0HMAU6RUC0FVS:00000004": done reading request body.
+2021-08-13 13:47:58.748 +05:00 [DBG] JSON input formatter threw an exception: 'F' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+System.Text.Json.JsonException: 'F' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'F' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonConverter jsonConverter, Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+2021-08-13 13:47:58.784 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:47:58.785 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:47:58.785 +05:00 [DBG] Attempting to validate the bound parameter 'log' of type 'System.String' ...
+2021-08-13 13:47:58.785 +05:00 [DBG] Done attempting to validate the bound parameter 'log' of type 'System.String'.
+2021-08-13 13:47:58.797 +05:00 [DBG] The request has model state errors, returning an error response.
+2021-08-13 13:47:58.799 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2021-08-13 13:47:58.805 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-08-13 13:47:58.820 +05:00 [DBG] No information found on request to perform content negotiation.
+2021-08-13 13:47:58.825 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml"]'.
+2021-08-13 13:47:58.830 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2021-08-13 13:47:58.832 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-08-13 13:47:58.939 +05:00 [INF] Executed action ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest) in 487.348ms
+2021-08-13 13:47:58.946 +05:00 [INF] Executed endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:47:58.953 +05:00 [INF] HTTP POST /ParsingLogs/parse responded 400 in 828.1379 ms
+2021-08-13 13:47:58.959 +05:00 [DBG] Connection id "0HMAU6RUC0FVS" completed keep alive response.
+2021-08-13 13:47:58.996 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/json 5 - 400 - application/problem+json;+charset=utf-8 887.7361ms
+2021-08-13 13:49:10.870 +05:00 [INF] Starting web host
+2021-08-13 13:49:11.566 +05:00 [DBG] Hosting starting
+2021-08-13 13:49:12.223 +05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 34297F096C16E1CA2FE9B9B16742841A92D5E9A4)
+2021-08-13 13:49:12.260 +05:00 [INF] Now listening on: https://localhost:5001
+2021-08-13 13:49:12.260 +05:00 [INF] Now listening on: http://localhost:5000
+2021-08-13 13:49:12.261 +05:00 [DBG] Loaded hosting startup assembly ObservabilityPlatform.Rest
+2021-08-13 13:49:12.261 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-13 13:49:12.261 +05:00 [INF] Hosting environment: Development
+2021-08-13 13:49:12.261 +05:00 [INF] Content root path: /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest
+2021-08-13 13:49:12.261 +05:00 [DBG] Hosting started
+2021-08-13 13:49:12.282 +05:00 [DBG] Connection id "0HMAU6SSGI6UH" received FIN.
+2021-08-13 13:49:12.352 +05:00 [DBG] Connection id "0HMAU6SSGI6UH" accepted.
+2021-08-13 13:49:12.530 +05:00 [DBG] Connection id "0HMAU6SSGI6UH" started.
+2021-08-13 13:49:12.582 +05:00 [DBG] Connection id "0HMAU6SSGI6UI" accepted.
+2021-08-13 13:49:12.585 +05:00 [DBG] Connection id "0HMAU6SSGI6UI" started.
+2021-08-13 13:49:12.624 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2021-08-13 13:49:12.753 +05:00 [DBG] Connection id "0HMAU6SSGI6UJ" accepted.
+2021-08-13 13:49:12.783 +05:00 [DBG] Connection id "0HMAU6SSGI6UJ" started.
+2021-08-13 13:49:12.836 +05:00 [DBG] Connection id "0HMAU6SSGI6UH" stopped.
+2021-08-13 13:49:12.840 +05:00 [DBG] Connection id "0HMAU6SSGI6UH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-08-13 13:49:12.848 +05:00 [DBG] Connection "0HMAU6SSGI6UI" established using the following protocol: "Tls12"
+2021-08-13 13:49:12.863 +05:00 [DBG] Connection "0HMAU6SSGI6UJ" established using the following protocol: "Tls12"
+2021-08-13 13:49:13.214 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+2021-08-13 13:49:13.219 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-08-13 13:49:13.542 +05:00 [DBG] Connection id "0HMAU6SSGI6UJ" completed keep alive response.
+2021-08-13 13:49:13.546 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 343.5689ms
+2021-08-13 13:49:13.997 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-13 13:49:14.358 +05:00 [DBG] Connection id "0HMAU6SSGI6UI" completed keep alive response.
+2021-08-13 13:49:14.358 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 361.7439ms
+2021-08-13 13:50:00.784 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/json 13
+2021-08-13 13:50:00.799 +05:00 [DBG] POST requests are not supported
+2021-08-13 13:50:00.994 +05:00 [DBG] 1 candidate(s) found for the request path '/ParsingLogs/parse'
+2021-08-13 13:50:01.007 +05:00 [DBG] Endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)' with route pattern 'ParsingLogs/parse' is valid for the request path '/ParsingLogs/parse'
+2021-08-13 13:50:01.011 +05:00 [DBG] Request matched endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:50:01.049 +05:00 [INF] Executing endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:50:01.225 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2021-08-13 13:50:01.357 +05:00 [INF] Route matched with {action = "Parse", controller = "ParsingLogs"}. Executing controller action with signature Void Parse(System.Collections.Generic.IEnumerable`1[System.String], System.String) on controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest).
+2021-08-13 13:50:01.360 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-08-13 13:50:01.360 +05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+2021-08-13 13:50:01.361 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-08-13 13:50:01.362 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-08-13 13:50:01.363 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-08-13 13:50:01.366 +05:00 [DBG] Executing controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:50:01.369 +05:00 [DBG] Executed controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:50:01.415 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:50:01.431 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:50:01.506 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:50:01.534 +05:00 [DBG] Attempting to bind model of type 'System.String' using the name '' in request data ...
+2021-08-13 13:50:01.541 +05:00 [DBG] Done attempting to bind model of type 'System.String' using the name ''.
+2021-08-13 13:50:01.546 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:50:01.554 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:50:01.556 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:50:01.558 +05:00 [DBG] Attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:50:01.575 +05:00 [DBG] Done attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:50:01.596 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' ...
+2021-08-13 13:50:01.604 +05:00 [DBG] Attempting to bind parameter 'log' of type 'System.String' using the name '' in request data ...
+2021-08-13 13:50:01.612 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2021-08-13 13:50:01.668 +05:00 [DBG] Connection id "0HMAU6SSGI6UI", Request id "0HMAU6SSGI6UI:00000003": started reading request body.
+2021-08-13 13:50:01.671 +05:00 [DBG] Connection id "0HMAU6SSGI6UI", Request id "0HMAU6SSGI6UI:00000003": done reading request body.
+2021-08-13 13:50:01.700 +05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Converters.StringConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCoreAsObject(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonConverter jsonConverter, Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+2021-08-13 13:50:01.994 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:50:01.995 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'System.String'.
+2021-08-13 13:50:01.998 +05:00 [DBG] Attempting to validate the bound parameter 'log' of type 'System.String' ...
+2021-08-13 13:50:02.004 +05:00 [DBG] Done attempting to validate the bound parameter 'log' of type 'System.String'.
+2021-08-13 13:50:02.007 +05:00 [DBG] The request has model state errors, returning an error response.
+2021-08-13 13:50:02.017 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2021-08-13 13:50:02.024 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-08-13 13:50:02.038 +05:00 [DBG] No information found on request to perform content negotiation.
+2021-08-13 13:50:02.040 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml"]'.
+2021-08-13 13:50:02.045 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2021-08-13 13:50:02.046 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-08-13 13:50:02.289 +05:00 [INF] Executed action ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest) in 905.1904ms
+2021-08-13 13:50:02.293 +05:00 [INF] Executed endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:50:02.319 +05:00 [INF] HTTP POST /ParsingLogs/parse responded 400 in 1489.6053 ms
+2021-08-13 13:50:02.328 +05:00 [DBG] Connection id "0HMAU6SSGI6UI" completed keep alive response.
+2021-08-13 13:50:02.329 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/json 13 - 400 - application/problem+json;+charset=utf-8 1545.4023ms
+2021-08-13 13:50:12.561 +05:00 [DBG] Connection id "0HMAU6SSGI6UJ" disconnecting.
+2021-08-13 13:50:12.560 +05:00 [DBG] Connection id "0HMAU6SSGI6UJ" received FIN.
+2021-08-13 13:50:12.563 +05:00 [DBG] Connection id "0HMAU6SSGI6UJ" sending FIN because: "The client closed the connection."
+2021-08-13 13:50:12.577 +05:00 [DBG] Connection id "0HMAU6SSGI6UJ" stopped.
+2021-08-13 13:53:08.012 +05:00 [INF] Starting web host
+2021-08-13 13:53:09.473 +05:00 [DBG] Hosting starting
+2021-08-13 13:53:10.329 +05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 34297F096C16E1CA2FE9B9B16742841A92D5E9A4)
+2021-08-13 13:53:10.376 +05:00 [INF] Now listening on: https://localhost:5001
+2021-08-13 13:53:10.376 +05:00 [INF] Now listening on: http://localhost:5000
+2021-08-13 13:53:10.410 +05:00 [DBG] Loaded hosting startup assembly ObservabilityPlatform.Rest
+2021-08-13 13:53:10.412 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-13 13:53:10.421 +05:00 [INF] Hosting environment: Development
+2021-08-13 13:53:10.423 +05:00 [INF] Content root path: /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest
+2021-08-13 13:53:10.455 +05:00 [DBG] Hosting started
+2021-08-13 13:53:10.736 +05:00 [DBG] Connection id "0HMAU6V3ILERD" received FIN.
+2021-08-13 13:53:11.009 +05:00 [DBG] Connection id "0HMAU6V3ILERD" accepted.
+2021-08-13 13:53:11.023 +05:00 [DBG] Connection id "0HMAU6V3ILERD" started.
+2021-08-13 13:53:11.101 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2021-08-13 13:53:11.212 +05:00 [DBG] Connection id "0HMAU6V3ILERE" accepted.
+2021-08-13 13:53:11.344 +05:00 [DBG] Connection id "0HMAU6V3ILERE" started.
+2021-08-13 13:53:11.477 +05:00 [DBG] Connection id "0HMAU6V3ILERD" stopped.
+2021-08-13 13:53:11.481 +05:00 [DBG] Connection id "0HMAU6V3ILERD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-08-13 13:53:11.505 +05:00 [DBG] Connection id "0HMAU6V3ILERF" accepted.
+2021-08-13 13:53:11.505 +05:00 [DBG] Connection id "0HMAU6V3ILERF" started.
+2021-08-13 13:53:11.558 +05:00 [DBG] Connection "0HMAU6V3ILERF" established using the following protocol: "Tls12"
+2021-08-13 13:53:11.559 +05:00 [DBG] Connection "0HMAU6V3ILERE" established using the following protocol: "Tls12"
+2021-08-13 13:53:11.850 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+2021-08-13 13:53:11.859 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-08-13 13:53:12.309 +05:00 [DBG] Connection id "0HMAU6V3ILERF" completed keep alive response.
+2021-08-13 13:53:12.314 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 478.5460ms
+2021-08-13 13:53:12.978 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-13 13:53:14.254 +05:00 [DBG] Connection id "0HMAU6V3ILERE" completed keep alive response.
+2021-08-13 13:53:14.254 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1276.3229ms
+2021-08-13 13:56:02.228 +05:00 [INF] Starting web host
+2021-08-13 13:56:03.412 +05:00 [DBG] Hosting starting
+2021-08-13 13:56:04.027 +05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 34297F096C16E1CA2FE9B9B16742841A92D5E9A4)
+2021-08-13 13:56:04.069 +05:00 [INF] Now listening on: https://localhost:5001
+2021-08-13 13:56:04.069 +05:00 [INF] Now listening on: http://localhost:5000
+2021-08-13 13:56:04.070 +05:00 [DBG] Loaded hosting startup assembly ObservabilityPlatform.Rest
+2021-08-13 13:56:04.071 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-13 13:56:04.071 +05:00 [INF] Hosting environment: Development
+2021-08-13 13:56:04.071 +05:00 [INF] Content root path: /Users/sorokindmitrij/RiderProjects/ObservabilityPlatform/ObservabilityPlatform.Rest
+2021-08-13 13:56:04.072 +05:00 [DBG] Hosting started
+2021-08-13 13:56:04.573 +05:00 [DBG] Connection id "0HMAU70NCGBAL" received FIN.
+2021-08-13 13:56:04.648 +05:00 [DBG] Connection id "0HMAU70NCGBAL" accepted.
+2021-08-13 13:56:04.651 +05:00 [DBG] Connection id "0HMAU70NCGBAL" started.
+2021-08-13 13:56:04.899 +05:00 [DBG] Connection id "0HMAU70NCGBAM" accepted.
+2021-08-13 13:56:04.899 +05:00 [DBG] Connection id "0HMAU70NCGBAM" started.
+2021-08-13 13:56:04.757 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2021-08-13 13:56:05.128 +05:00 [DBG] Connection id "0HMAU70NCGBAN" accepted.
+2021-08-13 13:56:05.159 +05:00 [DBG] Connection id "0HMAU70NCGBAN" started.
+2021-08-13 13:56:05.198 +05:00 [DBG] Connection id "0HMAU70NCGBAL" stopped.
+2021-08-13 13:56:05.209 +05:00 [DBG] Connection id "0HMAU70NCGBAL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-08-13 13:56:05.223 +05:00 [DBG] Connection "0HMAU70NCGBAM" established using the following protocol: "Tls12"
+2021-08-13 13:56:05.223 +05:00 [DBG] Connection "0HMAU70NCGBAN" established using the following protocol: "Tls12"
+2021-08-13 13:56:05.700 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+2021-08-13 13:56:05.703 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-08-13 13:56:06.035 +05:00 [DBG] Connection id "0HMAU70NCGBAN" completed keep alive response.
+2021-08-13 13:56:06.153 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 458.8272ms
+2021-08-13 13:56:06.517 +05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-13 13:56:07.354 +05:00 [DBG] Connection id "0HMAU70NCGBAM" completed keep alive response.
+2021-08-13 13:56:07.354 +05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 837.1463ms
+2021-08-13 13:56:23.183 +05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/json 13
+2021-08-13 13:56:23.191 +05:00 [DBG] POST requests are not supported
+2021-08-13 13:56:23.325 +05:00 [DBG] 1 candidate(s) found for the request path '/ParsingLogs/parse'
+2021-08-13 13:56:23.332 +05:00 [DBG] Endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)' with route pattern 'ParsingLogs/parse' is valid for the request path '/ParsingLogs/parse'
+2021-08-13 13:56:23.333 +05:00 [DBG] Request matched endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:56:23.341 +05:00 [INF] Executing endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:56:23.377 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2021-08-13 13:56:23.496 +05:00 [INF] Route matched with {action = "Parse", controller = "ParsingLogs"}. Executing controller action with signature Void Parse(System.Collections.Generic.IEnumerable`1[System.String], ObservabilityPlatform.Rest.Entities.Log) on controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest).
+2021-08-13 13:56:23.500 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-08-13 13:56:23.501 +05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+2021-08-13 13:56:23.502 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-08-13 13:56:23.504 +05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-08-13 13:56:23.508 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-08-13 13:56:23.512 +05:00 [DBG] Executing controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:56:23.523 +05:00 [DBG] Executed controller factory for controller ObservabilityPlatform.Rest.Controllers.ParsingLogsController (ObservabilityPlatform.Rest)
+2021-08-13 13:56:23.553 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:56:23.560 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:56:23.567 +05:00 [DBG] Attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' using the name '' in request data ...
+2021-08-13 13:56:23.574 +05:00 [DBG] Attempting to bind model of type 'System.String' using the name '' in request data ...
+2021-08-13 13:56:23.578 +05:00 [DBG] Done attempting to bind model of type 'System.String' using the name ''.
+2021-08-13 13:56:23.581 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:56:23.582 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:56:23.583 +05:00 [DBG] Done attempting to bind parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:56:23.583 +05:00 [DBG] Attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]' ...
+2021-08-13 13:56:23.588 +05:00 [DBG] Done attempting to validate the bound parameter 'keyWords' of type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+2021-08-13 13:56:23.601 +05:00 [DBG] Attempting to bind parameter 'log' of type 'ObservabilityPlatform.Rest.Entities.Log' ...
+2021-08-13 13:56:23.603 +05:00 [DBG] Attempting to bind parameter 'log' of type 'ObservabilityPlatform.Rest.Entities.Log' using the name '' in request data ...
+2021-08-13 13:56:23.607 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2021-08-13 13:56:23.623 +05:00 [DBG] Connection id "0HMAU70NCGBAM", Request id "0HMAU70NCGBAM:00000003": started reading request body.
+2021-08-13 13:56:23.624 +05:00 [DBG] Connection id "0HMAU70NCGBAM", Request id "0HMAU70NCGBAM:00000003": done reading request body.
+2021-08-13 13:56:23.654 +05:00 [DBG] JSON input formatter succeeded, deserializing to type 'ObservabilityPlatform.Rest.Entities.Log'
+2021-08-13 13:56:23.659 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'ObservabilityPlatform.Rest.Entities.Log'.
+2021-08-13 13:56:23.659 +05:00 [DBG] Done attempting to bind parameter 'log' of type 'ObservabilityPlatform.Rest.Entities.Log'.
+2021-08-13 13:56:23.665 +05:00 [DBG] Attempting to validate the bound parameter 'log' of type 'ObservabilityPlatform.Rest.Entities.Log' ...
+2021-08-13 13:56:23.668 +05:00 [DBG] Done attempting to validate the bound parameter 'log' of type 'ObservabilityPlatform.Rest.Entities.Log'.
+2021-08-13 13:56:23.707 +05:00 [INF] Executing action method ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest) - Validation state: "Valid"
+2021-08-13 13:56:23.709 +05:00 [DBG] HI! ObservabilityPlatform.Rest.Entities.Log
+2021-08-13 13:56:23.736 +05:00 [INF] Executed action method ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 1.9186ms.
+2021-08-13 13:56:23.753 +05:00 [INF] Executed action ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest) in 234.0528ms
+2021-08-13 13:56:23.753 +05:00 [INF] Executed endpoint 'ObservabilityPlatform.Rest.Controllers.ParsingLogsController.Parse (ObservabilityPlatform.Rest)'
+2021-08-13 13:56:23.760 +05:00 [INF] HTTP POST /ParsingLogs/parse responded 200 in 560.0914 ms
+2021-08-13 13:56:23.764 +05:00 [DBG] Connection id "0HMAU70NCGBAM" completed keep alive response.
+2021-08-13 13:56:23.766 +05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/ParsingLogs/parse application/json 13 - 200 0 - 582.8446ms
