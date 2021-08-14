@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ObservabilityPlatform.Rest.Entities;
 using ObservabilityPlatform.Rest.Services;
+using OpenTelemetry.Trace;
 
 namespace ObservabilityPlatform.Rest.Controllers
 {
@@ -41,7 +42,9 @@ namespace ObservabilityPlatform.Rest.Controllers
                 
             using (var span = new Activity("Log parsing"))
             {
+                span.Start();
                 metrics = _parser.Parse(log, keyWords);
+                span.Stop();
             }
 
             _logger.LogInformation("Pushing metrics to VM started");
@@ -50,14 +53,18 @@ namespace ObservabilityPlatform.Rest.Controllers
             
             using (var span = new Activity("Push metrics to VM"))
             {
+                span.Start();
                 await _vmPusher.Push(enumerable, log);
+                span.Stop();
             }
             
             _logger.LogInformation("Pushing log to Elastic started");
             
             using (var span = new Activity("Push logs to Elastic"))
             {
+                span.Start();
                 _elasticPusher.Push(log);
+                span.Stop();
             }
 
             return enumerable;
